@@ -18,6 +18,10 @@ export class TeacherStore {
   }
 
   deleteOne(id: number) {
+    console.log(
+      '🚀 ~ TeacherStore ~ deleteOne ~ this.teachers:',
+      this.teachers,
+    );
     this.teachers.next(this.teachers.value.filter((t) => t.id !== id));
   }
 }
